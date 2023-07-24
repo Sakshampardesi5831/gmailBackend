@@ -8,6 +8,9 @@ import { starredEmail } from '../controllers/emailController.js';
 import { deleteEmails } from '../controllers/emailController.js';
 const router=express.Router();
 
+router.get("/",function(req,res){
+    res.status(200).json("your backend server is started");
+})
 
 router.get("/allemails",allemails);
 
