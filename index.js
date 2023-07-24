@@ -21,5 +21,5 @@ app.use(express.urlencoded({extended:true}));
 app.use("/",router);
 
 ConnectionToDb();
-
-app.listen(process.env.PORT,()=>console.log(`SERVER IS RUNNING AT ${process.env.PORT}`));
+const PORT=process.env.PORT || 8000
+app.listen(PORT,()=>console.log(`SERVER IS RUNNING AT ${PORT}`));
